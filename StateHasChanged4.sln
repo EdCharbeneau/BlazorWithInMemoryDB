@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateHasChanged4.Server", "StateHasChanged4.Server\StateHasChanged4.Server.csproj", "{16ECE452-72F2-40F5-81E9-CA1747C2CD37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateHasChanged4.Server", "StateHasChanged4.Server\StateHasChanged4.Server.csproj", "{16ECE452-72F2-40F5-81E9-CA1747C2CD37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateHasChanged4.Client", "StateHasChanged4.Client\StateHasChanged4.Client.csproj", "{F25F3119-3D07-4AC6-88C9-EAD02F50A42D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateHasChanged4.Client", "StateHasChanged4.Client\StateHasChanged4.Client.csproj", "{F25F3119-3D07-4AC6-88C9-EAD02F50A42D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateHasChanged4.Shared", "StateHasChanged4.Shared\StateHasChanged4.Shared.csproj", "{2C7E1DA6-BA28-4437-97DA-D7FF745C5A9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateHasChanged4.Shared", "StateHasChanged4.Shared\StateHasChanged4.Shared.csproj", "{2C7E1DA6-BA28-4437-97DA-D7FF745C5A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,47 @@
+﻿@using StateHasChanged4.Shared
+@page "/fetchcustomers"
+@inject HttpClient Http
+
+<h1>Customers</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Company Name</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Total Orders</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in customers)
+            {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.CompanyName</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.TotalOrders</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    Customer[] customers;
+
+    protected override async Task OnInitAsync()
+    {
+        customers = await Http.GetJsonAsync<Customer[]>("api/SampleData/ReadCustomers");
+    }
+}

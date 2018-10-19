@@ -15,4 +15,10 @@
     <ProjectReference Include="..\StateHasChanged4.Shared\StateHasChanged4.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\FetchCustomers.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

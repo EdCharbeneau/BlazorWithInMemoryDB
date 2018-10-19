@@ -4,12 +4,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using StateHasChanged4.Server.Models;
 
 namespace StateHasChanged4.Server.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
+
+        private readonly CustomersContext _context;
+
+        public SampleDataController(CustomersContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet("[action]")]
+        public IEnumerable<Customer> ReadCustomers()
+        {
+            return _context.Customers.ToList();
+        } 
+
+        [HttpPost("[action]")]
+        public void CreateCustomer([FromBody]Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+        }
+
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -26,5 +48,6 @@ namespace StateHasChanged4.Server.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
         }
+
     }
 }
